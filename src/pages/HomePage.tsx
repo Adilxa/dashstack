@@ -1,5 +1,6 @@
 import Card, { ICard } from "../components/Card/Card";
 import { styled } from 'styled-components';
+import Chart from "../components/Chart/Chart";
 
 const cards: ICard[] = [
     {
@@ -38,6 +39,11 @@ const CardsWrapper = styled.div`
     justify-content: space-between;
 `
 
+const ChartWrapper = styled.main`
+    width: 100%;
+    height: 500px;
+`
+
 
 const HomePage = () => {
 
@@ -52,6 +58,9 @@ const HomePage = () => {
             <CardsWrapper>
                 {render()}
             </CardsWrapper>
+            <ChartWrapper>
+                <Chart />
+            </ChartWrapper>
         </Wrapper>
     )
 }
